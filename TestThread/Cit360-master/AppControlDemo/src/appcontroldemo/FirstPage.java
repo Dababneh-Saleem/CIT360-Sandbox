@@ -7,7 +7,7 @@ package appcontroldemo;
 
 /**
  *
- * @author christianray
+ * @author sdababneh
  */
 public class FirstPage {
   public void show()

@@ -10,7 +10,7 @@ import org.json.simple.JSONObject;
 
 /**
  *
- * @author christianray
+ * @author sdababneh
  */
 public class JSONTest {
 

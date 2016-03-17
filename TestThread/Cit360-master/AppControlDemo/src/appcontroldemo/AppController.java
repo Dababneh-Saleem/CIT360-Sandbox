@@ -7,7 +7,7 @@ package appcontroldemo;
 
 /**
  *
- * @author christianray
+ * @author sdababneh
  */
 public class AppController
 {

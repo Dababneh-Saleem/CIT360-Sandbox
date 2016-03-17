@@ -7,7 +7,7 @@ package smtpclient;
 
 /**
  *
- * @author christianray
+ * @author sdababneh
  */
 import java.io.*;
 import java.net.*;
