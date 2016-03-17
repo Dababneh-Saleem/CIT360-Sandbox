@@ -7,7 +7,7 @@ package mvctesting;
 
 /**
  *
- * @author christianray
+ * @author sdababneh
  */
 public class MVCTesting {
 
