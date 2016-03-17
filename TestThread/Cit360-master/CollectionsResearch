@@ -1,0 +1,14 @@
+JAVA Collections
+
+•	A collection — sometimes called a container — is simply an object that groups multiple elements into a single unit. Collections are used to store, retrieve, manipulate, and communicate aggregate data. (https://docs.oracle.com/javase/tutorial/collections/intro/)
+•	Lists are groups of objects where there can be duplicates
+•	Set are groups where there are no duplicates
+•	Other collection types are queues, deques, and maps, SortedSet, SortedMap, queue, TreeMaps
+
+LIST: Functions much like a variable sized array. Each entry has an index and items can be added and taken away
+SET: Things are there, or they aren’t. There is no duplication of items, no order or indexing. Good for a dictionary or to see if there is an entry in a list of items
+MAP: Good for tracking association of keys and values
+QUEUE: Like a list, but you are only concerned with the end; what goes in and out. Usually adding to one side and removing form the other, like a line or a sequential to-do list
+
+Lists and Collections have built-in functions like add, remove, get, size, etc. 
+
