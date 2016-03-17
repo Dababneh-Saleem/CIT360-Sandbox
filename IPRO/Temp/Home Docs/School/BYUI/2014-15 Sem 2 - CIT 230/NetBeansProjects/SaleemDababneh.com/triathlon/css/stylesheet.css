@@ -1,0 +1,186 @@
+/**{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;   
+  box-sizing: border-box; 
+  width: 80%
+}*/
+
+body { 
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  overflow-x: hidden;
+/*  padding: 0% 15% 0% 15%;*/
+  }
+
+@font-face { 
+/*    A font fabric font - http://fontfabric.com/arkhip-font/ */
+    font-family: 'Arkhip'; 
+    src: url('http://saleemdababneh.com/triathlon/css/fonts/Arkhip_font.eot');
+    src: url('http://saleemdababneh.com/triathlon/css/fonts/Arkhip_font.eot?#iefix') format('embedded-opentype'), 
+        url('http://saleemdababneh.com/triathlon/css/fonts/Arkhip_font.woff') format('woff'),  
+        url('http://saleemdababneh.com/triathlon/css/fonts/Arkhip_font.ttf') format('truetype'), 
+        url('http://saleemdababneh.com/triathlon/css/fonts/Arkhip_font.svg#Arkhip') format('svg');
+}
+ul {
+    display:inline;
+    font-family: Arkhip, Arial, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+main .main {
+      padding: 0% 15% 0% 15%;
+}
+
+nav {
+    text-align: center;
+}
+
+/*Future implementations of the @viewport will be available in CSS, storing here for now.
+Validation of CSS3 at jigsaw.w3.org/css-validator
+
+@viewport {
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+@-ms-viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+}*/
+
+title{
+    font-family: Arkhip, Arial, Verdana, sans-serif;
+    text-align: center
+}
+
+h1{
+  font-family: Arkhip, Arial, Verdana, sans-serif;
+  font-size: 175%;
+  text-transform: uppercase;
+}
+
+h2{
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 125%;
+  text-transform: capitalize;
+}
+
+h3{
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 100%;
+/*    text-decoration: underline  {color: #41A1B2;}; */
+  text-decoration: underline; 
+}
+
+h4, h5{
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 95%;
+}
+
+h6{
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 75%;
+  text-align: right;
+}
+
+p{
+  font-size: 90%;
+  width: 90%;
+  padding: 1em;
+  border: .1em;
+  margin: .5em;
+}
+ol{
+  width: 90%;
+}
+
+li{
+  width: 90%;
+}
+
+@media only screen and (max-width: 1024px) { 
+    img {max-width: 80%}
+    video {max-width: 80%;}
+}
+
+@media only screen and (max-width: 960px) { 
+    img {max-width: 80%}
+    video {max-width: 80%;}
+}
+        
+@media only screen and (max-width: 786px) { 
+    img {max-width: 80%;}
+    video {max-width: 80%;}
+}
+              
+@media only screen and (max-width: 480px) {
+    img {max-width: 80%;}
+    video {max-width: 80%;}
+}
+        
+@media only screen and (max-width: 400px) { 
+    img {max-width: 80%;}
+    video {max-width: 80%;}
+}
+
+@media only screen and (max-width: 320px) { 
+    img {max-width: 80%;}
+    video {max-width: 80%;}
+}
+
+table {
+    margin-left:auto; 
+    margin-right:auto; 
+}
+
+a {
+    color:#41A1B2;
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration: overline;
+    font-weight: bold;
+}
+
+.border {
+    border-style:dashed;
+    alignment-adjust: central;
+    text-align: center;
+    width: 50%;
+    color: #FF831C;
+}
+
+.center {
+    text-align: center;
+} 
+
+.padding {
+    text-align: left;
+    padding:0px 0px 0px 0px;
+}
+
+.padding2 {
+    height: 450px; 
+    vertical-align: top;
+}
+
+.bluebackground {
+    background-color: blue;
+}
+
+.headerbar {
+    text-align: center;
+    background-color: #323232;
+    margin: 0;
+    width:100%;
+    padding: 0%;
+}
+
+.footerbar {
+    background-color: #FF831C;
+    margin: 0;
+    width:100%;
+    padding: 0%;
+}

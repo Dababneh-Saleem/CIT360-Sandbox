@@ -1,0 +1,356 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 6, 2015, 9:23:08 AM
+    Author     : Rachel Hampton
+*/
+
+@import "normalize.min.css";
+*{
+    box-sizing: border-box;
+}
+
+/* Styling in a way older browsers have some direction*/
+html{ /*element selector*/
+    width: 100%;
+    height: 100%;
+}
+/*skip head because the user never sees anything in it*/
+body{
+    font-family: 'PT Sans Narrow', Arial Narrow, sans-serif;  
+    font-size: 18px; /*Don't have to put 16 b/c is standard but can if want*/
+    color: #2f4f4f;
+    background-color: #dedad7;
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+li{
+    display: block;
+    padding: 1px;
+    margin: 2px;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+a:link,
+a:visited,
+a:active {/*Psuedo classes in a selector, psuedo class specificity = 10 and with element = 11*/
+    color:#8a8a80; /*Changes link color from default blue*/
+    text-decoration: none; /*changes link so doesn't have default underline*/
+    outline: none; /*Remove outline that might be residual of link*/
+}
+
+a:hover,a:focus{
+    text-decoration: overline;
+    font-weight: bold;
+    color: #2f4f4f;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Shadows into Light Two', Arial Narrow, sans-serif;
+    margin: 1px;
+    padding: 0;
+    font-weight: normal;
+    letter-spacing: 0;
+    color: #333;
+}
+
+h1 {
+    font-size: 2em;
+    /* 2.25 * 16 = 36 pixels */
+    
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.375em;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 1em;
+}
+
+h1+p,
+h2+p,
+h3+p,
+h4+p,
+h5+p,
+h6+p {
+    margin-top: .15em;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    margin-top: 10px;/*Keeps the image the size of the screen so when shrink screen, image shrinks.*/
+    border-radius: 10px;
+}
+
+video{
+    max-width: 100%;
+}
+/*Float Clearing Class Rule*/
+
+.clearfix:after { /*stops anything from below "floating" from floating up above the element above it*/
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    font-size: 0;
+}
+
+body>div {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /* Declares the body inner-div as a flex parent */
+    
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+}
+
+*[role]>div {
+    width: 100%;
+    margin: 0 auto; /*Centers all the inner divs*/
+}
+
+header h1 {
+    font: 2em 'Shadows into Light Two', Arial Narrow, sans-serif;
+    margin-left: 1em;
+}
+
+nav[role=navigation] {
+    width: 100%;
+    background-color: #e8e099;
+    border-radius: 10px;
+}
+
+nav ul {
+    font-size: 1.25em;
+    margin: 0;
+    padding: 0;
+    /*float: right;*/
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /* Declares the Ul as a flex parent */
+    
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    /* Set the primary axis to horizontal, and does not allow children to wrap */
+    
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 5.5em;
+    -ms-flex: 0 0 5.5em;
+    /*float: left; Don't need this b/c of the flexbox.*/
+    flex: 0 0 5.5em; /*first 0 = growth, second = shrinkage, third (don't have to include) = default size*/
+}
+
+nav ul li a { /*specificity = 4*/
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+    height: 40px;/*height of the anchor, useful for smartphones so the link is large enough to touch*/
+    line-height: 40px;
+    font-family: "Shadows into Light Two", Helvetica, sans-serif;
+    color: #6fa3a6 !important;/*#ddd is trumped by a:link so use !important to "win"*/
+}
+
+main {
+    margin: 0.5em 2em 0.5em 2em;
+}
+
+main>div {
+    padding: 20px;
+    background: #f5f3f2;
+    min-height: 400px;
+    margin: 40px;
+    border-radius: 10px;
+}
+
+footer[role] {
+    width: 100%;
+    background-color: #c6e3e6;
+    padding: 1em;
+    font-size: .75em;
+    color: #6fa3a6;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+footer[role] ul {
+    padding: 0;
+}
+
+footer[role] li {
+    float: left;
+    margin-right: 5px;
+}
+
+footer[role] a:hover {
+    color: #6fa3a6;
+    font-weight: normal;
+}
+
+td.color {
+    width: 7em;
+    height: 7em;
+    border: 1px solid #000;
+    font-size: .8em;
+    text-align: center;
+}
+
+td.color:nth-of-type(1) {
+    background-color: #c6e3e6;
+    color: #000;    
+}
+
+td.color:nth-of-type(2) {
+    background-color: #6fa3a6;
+    color: #000;
+}
+
+td.color:nth-of-type(3) {
+    background-color: #8a8a80;
+    color: #000;
+}
+
+td.color:nth-of-type(4) {
+    background-color: #e8e099;
+    color: #000;
+}
+
+td.color:nth-of-type(5) {
+    background-color: #dedad7;
+    color: #000;
+}
+
+td.color:nth-of-type(6) {
+    background-color: #f5f3f2;
+    color: #000;
+}
+
+table#type {
+    width: 100%;
+    border: 3px solid #000;
+    font-size: .7em;
+}
+
+table#type tr {
+    border: 3px solid #000;
+}
+
+table#type td {
+    padding: .5em .125em;
+}
+
+table#type tr:first-of-type {
+    text-align: left;
+    font-weight: bold;
+}
+
+table#type tr:first-of-type th:first-of-type {
+    padding-left: 1.5em;
+}
+
+body>div{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;    
+}
+
+@media screen and (max-width: 700px){
+    nav[role]{
+        font-size: 3vw;
+        position: fixed;
+        bottom: 0;
+    }
+    nav[role]>div{
+        width: 100%;
+    }
+    nav[role] li{
+        margin: 0;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+    header[role] h1{
+        font-size: 2em;
+        text-align: center;
+    }
+    footer[role]{
+        margin-bottom: 2.5em;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    /*Adjust the overall size of the main container of all page elements*/
+    /*Make the font size flexible*/
+    
+    body>div {
+        margin: 0 auto;
+        max-width: 1300px;
+        font-size: 1.5vw;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1300px),
+only screen and (min-device-pixel-ratio: 2) and (min-width: 1300px),
+only screen and (min-resolution: 192dpi) and (min-width: 1300px),
+only screen and (min-resolution: 2dppx) and (min-width: 1300px) {
+    /*Make the font size flexible*/
+    
+    body {
+        font-size: 2vw;
+    }
+    /*Adjust the overall size of the main container of all page elements*/
+    
+    body>div {
+        margin: 0 auto;
+        max-width: 1300px;
+    }
+}

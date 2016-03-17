@@ -1,0 +1,34 @@
+*{
+  -moz-box-sizing: border-box;   
+  box-sizing: border-box; 
+}
+
+body { 
+  font-family: Segui UI, Palatino, Georgia, Times, serif;
+  /* http://www.w3schools.com/cssref/playit.asp?filename=playcss_font-family 
+     or http://www.w3schools.com/cssref/css_websafe_fonts.asp */
+  font-size: 12px;
+}
+
+h1{
+  font-size: 2.5em;
+}
+
+h2{
+  font-size: 1.75em;
+}
+
+p{
+  font-size: 1em;
+  width: 90%;
+  padding: 1em;
+  border: .1em dashed #000;
+  margin: .5em;
+}
+ol{
+  width: 100%;
+}
+
+li{
+  width: 50%;
+}
