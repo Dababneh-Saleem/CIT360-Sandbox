@@ -6,8 +6,8 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/employee?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
-    <mapping class="" file="" jar="" package="" resource="javaapplication6/Employee.hbm.xml"/>
-    <mapping class="" file="" jar="" package="" resource="javaapplication6/JSON.hbm.xml"/>
-    <mapping resource="javaapplication6/Collections.hbm.xml"/>
+    <mapping class="" file="" jar="" package="" resource="Employee.hbm.xml"/>
+    <mapping class="" file="" jar="" package="" resource="JSON.hbm.xml"/>
+    <mapping resource="Collections.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

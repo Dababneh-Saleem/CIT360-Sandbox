@@ -23,7 +23,8 @@ public class ManageEmployee {
    private static SessionFactory factory; 
    public static void main(String[] args) {
       try{
-         factory = new Configuration().configure().buildSessionFactory();
+       // factory = new Configuration().configure().buildSessionFactory(null);
+           factory = HibernateUtil.getSessionFactory();
       }catch (Throwable ex) { 
          System.err.println("Failed to create sessionFactory object." + ex);
          throw new ExceptionInInitializerError(ex); 
