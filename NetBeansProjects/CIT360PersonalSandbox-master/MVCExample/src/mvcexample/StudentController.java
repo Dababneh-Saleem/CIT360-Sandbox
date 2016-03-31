@@ -5,6 +5,11 @@
  */
 package mvcexample;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 /**
  *
  * @author sdababneh
@@ -12,6 +17,12 @@ package mvcexample;
 public class StudentController {
    private Student model;
    private StudentView view;
+   private  List studentList = new ArrayList();
+   
+   public StudentController()
+   {
+       
+   }
 
    public StudentController(Student model, StudentView view){
       this.model = model;
@@ -37,4 +48,40 @@ public class StudentController {
    public void updateView(){				
       view.printStudentDetails(model.getName(), model.getRollNo());
    }	
+   
+   public void loadStudents()
+   {
+      
+      ExecutorService executor = Executors.newFixedThreadPool(1);
+      for(int i = 1; i<= 5 ; i++)
+      {
+          Runnable runnable = new StudentThread(i);
+          executor.execute(runnable);
+      }
+      studentList = StudentThread.studentList;
+      executor.shutdown();
+     
+       
+   }
+   
+   public String getStudent(String name)
+   {
+       
+       int size = studentList.size();
+       if(size >0)
+       {
+           for(int i=0; i<size ;i++)
+           {
+               Student s = (Student)studentList.get(i);
+               if(s.getName().equalsIgnoreCase(name) )
+               {
+                   return s.getRollNo();
+               }
+           }
+       }
+       return null;
+   }
+   
+   
+   
 }
