@@ -33,9 +33,21 @@ public class MySocketClient {
           String fromServer,fromClient;
          while((fromServer = reader.readLine()) != null )
          {
-         System.out.println("From server : "+fromServer);
+        
+          String[] strArray = fromServer.split("-");
+               if(strArray.length>0)
+               {
+                   System.out.println("From server : ");
+                   for(int i =0 ; i<strArray.length;i++)
+                   {
+                       System.out.println(strArray[i]);
+                   }
+               }else{
+                    System.out.println("From server : "+fromServer);
+               }
          while(fromServer.contains("loading")){
-             fromServer = reader.readLine();
+               fromServer = reader.readLine();
+              
                System.out.println("From server : "+fromServer);
                if(fromServer.contains("loading"))
                {

@@ -13,6 +13,7 @@ package mvcexample;
 public class Student {
    private String rollNo;
    private String name;
+   private String percentage;
    
    public String getRollNo() {
       return rollNo;
@@ -29,4 +30,14 @@ public class Student {
    public void setName(String name) {
       this.name = name;
    }
+
+    public String getPercentage() {
+        return percentage;
+    }
+
+    public void setPercentage(String percentage) {
+        this.percentage = percentage;
+    }
+   
+   
 }

@@ -34,6 +34,7 @@ public class MySocketServer {
          String inputLine ,outputLine;
          ServerProtocol sp = new ServerProtocol();
          outputLine = sp.processInput(null);
+        
          writer.println(outputLine);
          while((inputLine = reader.readLine()) != null )
          {
