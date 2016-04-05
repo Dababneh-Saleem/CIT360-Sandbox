@@ -10,7 +10,7 @@ import com.sample.gradeb.GradeBStudentController;
 import com.sample.gradec.GradeCStudentController;
 import com.sample.handler.StudentHandler;
 import java.util.HashMap;
-import mvcexample.Student;
+import com.sample.bean.Student;
 
 /**
  *

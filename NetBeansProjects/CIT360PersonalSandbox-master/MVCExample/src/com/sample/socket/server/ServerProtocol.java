@@ -7,7 +7,6 @@ package com.sample.socket.server;
 
 import com.sample.httpurlconnection.HTTPCommunication;
 import com.sample.maincontroller.MainController;
-import mvcexample.StudentController;
 
 /**
  *
@@ -21,7 +20,7 @@ public class ServerProtocol {
     private static final int EXITSTAGE = 3;
     private static int state = WAITINGSTAGE;
     
-    StudentController studentController = new StudentController();
+ 
     private static String selectedGrade = null;
     
     

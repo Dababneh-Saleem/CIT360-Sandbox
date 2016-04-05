@@ -7,7 +7,7 @@ package com.sample.gradeb;
 
 import java.util.ArrayList;
 import java.util.List;
-import mvcexample.Student;
+import com.sample.bean.Student;
 
 /**
  *

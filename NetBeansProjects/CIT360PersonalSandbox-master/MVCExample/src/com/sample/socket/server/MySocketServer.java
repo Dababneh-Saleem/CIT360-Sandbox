@@ -25,14 +25,21 @@ public class MySocketServer {
      */
     public static void main(String[] args) throws InterruptedException {
         try{
+         
+         //creating/establishing the socketserver with port number 9990   
          ServerSocket server = new ServerSocket(9990);
+         //Allowing access to client via command below
          Socket clientSocket = server.accept();
          System.out.println("Waiting for client on port " +
                          "9990" + "...");
+         //The below code will send the message to the client console.
          PrintWriter writer = new PrintWriter(clientSocket.getOutputStream(),true);
+         //Taking client console input to determine next action.
          BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
          String inputLine ,outputLine;
+         //Instantiating the serverProtocol object below
          ServerProtocol sp = new ServerProtocol();
+         //Depending on the state found in the ServerProtocol.java the below will output a message relative to the next step.
          outputLine = sp.processInput(null);
         
          writer.println(outputLine);
