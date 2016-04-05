@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mvcintegrationsample;
+package integrationsample;
 
-import mvcintegrationsample.StudentHandler;
+import integrationsample.StudentHandler;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -15,9 +15,9 @@ import java.util.concurrent.Executors;
  *
  * @author SDababneh
  */
-public class GradeCStudentController implements StudentHandler {
+public class GradeAStudentController implements StudentHandler {
     
-        private  List studentList = new ArrayList();
+     private  List studentList = new ArrayList();
    
      @Override
      public void loadStudents()
@@ -26,10 +26,10 @@ public class GradeCStudentController implements StudentHandler {
       ExecutorService executor = Executors.newFixedThreadPool(1);
       for(int i = 1; i<= 5 ; i++)
       {
-          Runnable runnable = new GradeCStudentThread(i);
+          Runnable runnable = new GradeAStudentThread(i);
           executor.execute(runnable);
       }
-      studentList = GradeCStudentThread.studentList;
+      studentList = GradeAStudentThread.studentList;
       executor.shutdown();
      
        
@@ -76,6 +76,5 @@ public class GradeCStudentController implements StudentHandler {
        return null;
        
     }
-    
     
 }

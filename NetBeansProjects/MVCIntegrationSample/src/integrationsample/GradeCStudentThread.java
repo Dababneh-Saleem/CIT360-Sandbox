@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mvcintegrationsample;
+package integrationsample;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,12 +12,12 @@ import java.util.List;
  *
  * @author SDababneh
  */
-public class GradeBStudentThread implements Runnable {
+public class GradeCStudentThread implements Runnable {
     
       public static List studentList = new ArrayList(); 
     private int value = 0;
     
-    public GradeBStudentThread(int value )
+    public GradeCStudentThread(int value )
     {
         this.value = value ;
     }
@@ -30,35 +30,28 @@ public class GradeBStudentThread implements Runnable {
         switch (value) {
             case 1:
                 Student student1 = new Student();
-                student1.setName("Nolan");
-                student1.setRollNo("414");
-                student1.setPercentage("82%");
+                student1.setName("Brian");
+                student1.setRollNo("754");
+                student1.setPercentage("75%");
                 studentList.add(student1);
             case 2:
                 Student student2 = new Student();
-                student2.setName("Melissa");
-                student2.setRollNo("444");
-                student2.setPercentage("84%");
+                student2.setName("Ezra");
+                student2.setRollNo("545");
+                student2.setPercentage("74%");
                 studentList.add(student2);
             case 3:
                 Student student3 = new Student();
-                student3.setName("Jamie");
-                student3.setRollNo("122");
-                student3.setPercentage("86%");
+                student3.setName("Palmer");
+                student3.setRollNo("777");
+                student3.setPercentage("79%");
                 studentList.add(student3);
             case 4:
                 Student student4 = new Student();
-                student4.setName("Dalton");
-                student4.setRollNo("228");
-                student4.setPercentage("89%");
+                student4.setName("Wilson");
+                student4.setRollNo("132");
+                student4.setPercentage("75%");
                 studentList.add(student4);
-            case 5:
-                Student student5 = new Student();
-                student5.setName("Brody");
-                student5.setRollNo("106");
-                student5.setPercentage("86%");
-                studentList.add(student5);
-
         }
 
 

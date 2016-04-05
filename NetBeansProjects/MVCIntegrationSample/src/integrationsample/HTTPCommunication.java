@@ -1,4 +1,4 @@
-package mvcintegrationsample;
+package integrationsample;
 
 import java.io.BufferedReader;
 import java.io.IOException;
